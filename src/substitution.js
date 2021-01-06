@@ -41,6 +41,9 @@ function substitution(input, alphabet, encode = true) {
   for (let i in inSpltAndLwr) {
     let singleWord = [];
     for (let j in inSpltAndLwr[i]) {
+      if (!subAlphResp[inSpltAndLwr[i][j]]) {
+        return false;
+      }
       singleWord.push(subAlphResp[inSpltAndLwr[i][j]]);
     }
     substituteChars.push(singleWord.join(""));

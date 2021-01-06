@@ -61,5 +61,12 @@ describe("substitution", () => {
     expect(actual).to.eql(expected);
   });
 
+  it("Should return false if symbol is not found in alphabet", () => {
+    const input = "Hell@";
+    const alphabet = "mfyealvgczwpoutbxirnjskqdh";
+    const actual = substitution(input, alphabet);
+    expect(actual).to.be.false;
+  });
+
 });
 
